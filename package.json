@@ -1,0 +1,55 @@
+{
+  "name": "gw",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-pc": "cross-env NODE_ENV=dev  supervisor -w routes,views -e node,js,html ./bin/www",
+    "start-mobile": "cross-env NODE_ENV=dev_mobile  supervisor -w routes,views -e node,js,html ./bin/www",
+    "build": "webpack --config build/webpack.production.config.js",
+    "production-pc": "cross-env NODE_ENV=production  webpack --config build/webpack.production.config.js -p & cross-env NODE_ENV=production  node ./bin/www",
+    "production-MOBILE": "cross-env NODE_ENV=production_mobile   webpack --config build/webpack.production.config.js -p & cross-env NODE_ENV=production node ./bin/www"
+  },
+  "browserslist": [
+    "Defaults",
+    "not ie < 9",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "^4.16.4",
+    "file-stream-rotator": "^0.3.1",
+    "format-datetime": "^1.0.2",
+    "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "autoprefixer": "^9.2.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "handlebars": "^4.0.12",
+    "handlebars-loader": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "reload": "^2.3.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "supervisor": "^0.12.0",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}

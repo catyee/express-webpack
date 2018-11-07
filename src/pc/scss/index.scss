@@ -1,0 +1,576 @@
+/*抢修站 服务站 数据中心*/
+/*common*/
+@import "./common/common.scss";
+/*字间行间距*/
+.space1{
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+.banner-title{
+    font-size: 30px;
+    font-weight: 600;
+}
+.hide{
+    display: none;
+}
+.color-blue{
+    color: #00fcff;
+}
+.section-title-font{
+    font-size: 20px;
+}
+.title--desc-font{
+    font-size: 16px;
+    color: #585858;
+    text-align: center;
+}
+.arrow{
+    display: inline-block;
+    @include bg-png(index/arrow);
+    width: 10px;
+    height: 10px;
+}
+.grey-border{
+    display: inline-block;
+    width: 60px ;
+    height: 2px;
+    background: #eee;
+}
+.spaceLetter{
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.color-orange-gradient{
+    display: inline-block;
+    color: #c47517;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#eacb2e ), to(#c47517));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*banner common*/
+.swiper-button-white{
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+}
+
+.slider{
+    height: 550px;
+    width: 100%;
+}
+.slider-panel{
+    position: relative;
+    height: 100%;
+    width: 1400px;
+    margin: 0 auto;
+}
+.slider1{
+    @include bg-jpg(index/banner1-bg);
+}
+.slider2 {
+    @include bg-jpg(index/banenr2-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-panel2{
+    @include bg-jpg(index/banner2_01);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.slider3{
+    @include bg-jpg(index/banner3-bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-panel3{
+    @include bg-jpg(index/banner3_01);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@keyframes dotFlash {
+    0%{
+        transform: scale(0.3);
+        opacity: 1;
+        filter:Alpha(opacity=100);
+    }
+    100%{
+        transform: scale(1.5);
+        opacity: 0;
+        filter:Alpha(opacity=0)
+    }
+}
+
+
+
+/*banner1*/
+.banner1-title{
+    position: absolute;
+    top: 150px;
+    left: 0px;
+    width: 430px;
+    color: white;
+}
+
+.banner1-title div:nth-child(2){
+    line-height: 30px;
+    margin-top: 20px;
+}
+.left-panel{
+    transform-style: preserve-3d;
+    position: absolute;
+    width: 876px;
+    height: 365px;
+    top: 90px;
+    left: 326px;
+    transform: rotateY(0)  rotateZ(0);
+}
+.banner1-platform-b{
+    transform: translateZ(120px);
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+.banner1-platform-m{
+    transform: translateZ(200px);
+    position: absolute;
+    left: 296px;
+    bottom: 72px;
+    z-index: 3;
+
+}
+.banner1-platform-t{
+    transform: translateZ(220px);
+    position: absolute;
+    left: 373px;
+    bottom: 164px;
+}
+.left-panel .number{
+    transform: translateZ(300px);
+    position: absolute;
+    left: 296px;
+    width: 335px;
+    text-align: center;
+    bottom: 36px;
+    z-index: 999;
+}
+ .number-desc{
+    position: absolute;
+    top: 237px;
+    left: 385px;
+    transform: translateZ(300px);
+}
+/*banner2*/
+.banner2-title{
+
+    position: absolute;
+    top: 150px;
+    left: 0%;
+    font-size: 36px;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    color: white;
+}
+.banner2-title div{
+    text-align: center;
+    font-size: 30px;
+}
+.banner2-title div:nth-child(2){
+    margin-top: 20px;
+    @include color(color);
+}
+
+
+/*banner3*/
+.bg-dot-yellow{
+    box-shadow: inset 5px 5px 8px rgba(233,190,43,1), inset -5px -5px 8px rgba(233,190,43,1);
+}
+.bg-dot-red{
+    box-shadow: inset 5px 5px 8px rgba(255,0,0,1), inset -5px -5px 8px rgba(255,0,0,1);
+}
+.bg-dot-blue{
+    box-shadow: inset 5px 5px 8px rgba(44,118,255,1), inset -5px -5px 8px rgba(44,118,255,1);
+}
+.color-dot-yellow{
+    @include color(color);
+}
+.color-dot-red{
+    color: #ff0000;
+}
+.color-dot-blue{
+    color: #2c76ff;
+}
+.slider-panel .dot{
+    position: absolute;
+    width: 44px;
+    height: 44px;
+}
+.dot-text{
+    position: absolute;
+    font-size: 16px;
+}
+.slider-panel .dot div{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 44px;
+    height: 44px;
+    border-radius:50%;
+    transform: scale(0);
+}
+.slider-panel .dot div:nth-child(1){
+    animation: dotFlash 3s infinite;
+
+}
+.slider-panel .dot div:nth-child(2){
+    animation: dotFlash 3s infinite;
+    animation-delay:1s;
+}
+.slider-panel .dot div:nth-child(3){
+    animation: dotFlash 3s infinite;
+    animation-delay:2s;
+
+}
+
+.slider-panel .dot div:nth-child(4){
+    width: 16px;
+    height: 16px;
+    top:14px;
+    left:14px;
+    transform: scale(1);
+    opacity: 0.8;
+    filter: Alpha(Opacity=80);
+}
+.banner3-title{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    font-size: 36px;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    color: white;
+
+}
+.banner3-title div:nth-child(1){
+    text-align: center;
+}
+.banner3-title div:nth-child(2){
+    font-size: 22px;
+    margin-top: 15px;
+    text-align: center;
+}
+.banner3-title div:nth-child(2) .color-orange-gradient{
+    font-size: 24px;
+}
+
+/*news*/
+
+.news-panel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+}
+.news-panel-con{
+    /*display: flex;*/
+}
+.news-left,.news-right{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    /*display: flex;*/
+}
+.more-news{
+    margin-left: 185px;
+}
+.news{
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+    display: block;
+
+}
+.news-width30{
+    width: 30px;
+    height: 100%;
+}
+.news-normal {
+    @include bg-png(news-sprites);
+    background-position: -18px -24px;
+}
+
+/*section 2*/
+.section2-title{
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+
+}
+
+
+
+.section2-list{
+    font-size: 0;
+    size-adjust:none;
+}
+
+.section2-list .section2-item{
+    width:280px ;
+    height: 356px;
+    text-align: center;
+    background: #fff;
+}
+
+.section2-item-box{
+    display: inline-block;
+    width:280px ;
+    height: 356px;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+@keyframes delayShadow{
+
+    0%{box-shadow: 0px 0px 15px rgba(0,0,0,0.0);}
+
+    50%{box-shadow: 0px 0px 15px rgba(0,0,0,0.0);}
+
+    100%{box-shadow: 0px 0px 15px rgba(0,0,0,0.25);}
+}
+
+.section2-item-box:hover{
+    animation: delayShadow 200ms;
+    animation-fill-mode:forwards;
+    animation-delay: 200ms;
+}
+
+@keyframes flipFront {
+
+    from{transform: rotateY(0deg);}
+
+    to{transform: rotateY(90deg);}
+
+}
+
+@keyframes flipBack {
+
+    from{
+        transform: rotateY(-90deg);
+    }
+
+    to{
+        transform: rotateY(0deg);
+    }
+
+}
+
+.section2-item-box:hover .section2-item{
+
+    animation: flipFront 200ms;
+    animation-fill-mode:forwards;
+
+
+}
+
+.section2-item-box .section2-item-pic{
+
+    transform: rotateY(-90deg);
+
+}
+
+.section2-item-box:hover .section2-item-pic{
+
+    animation: flipBack 200ms;
+    animation-delay: 200ms;
+    animation-fill-mode:forwards;
+
+}
+
+.section2-item-box .box-item{
+    position: absolute;
+}
+
+.section2-list .section2-item-box:nth-child(1),.section2-list .section2-item-box:nth-child(2),.section2-list .section2-item-box:nth-child(3){
+    margin-right: 20px;
+}
+
+.section2-list .section2-item:nth-child(1){
+    margin-left: 10px;
+}
+
+
+.section2-item-desc{
+    width: 223px ;
+    display: inline-block;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: left;
+    color: #6f6f6f;
+}
+.section2-item-title{
+    font-size: 14px;
+    color: #353535;
+    font-weight: 600;
+}
+
+
+/*section3*/
+.section3{
+    width: 100%;
+    height: 750px;
+    background: #fafafa;
+}
+.section3-title-desc{
+    color: #353535;
+}
+
+/*section4*/
+.section4-content{
+    // background: url("//cdn.dianwutong.com/home/images/index/p4.jpg") no-repeat;
+    @include bg-jpg(index/p4);
+    background-repeat: no-repeat;
+    height: 450px;
+    background-size: cover;
+}
+.section4-content .content{
+    // background: url("//cdn.dianwutong.com/home/images/index/section4-bg.jpg") no-repeat;
+    @include bg-jpg(index/section4-bg);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 1404px;
+    background-size: contain;
+    margin: 0 auto;
+    position: relative;
+}
+.section4-content .section4-cover{
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    background: rgba(0,0,0,0.15);
+}
+.section4-item{
+    position: absolute;
+    bottom: 62px;
+    width: 249px;
+    height: 439px;
+
+}
+.section4-item img{
+    z-index: 6;
+    border-radius: 10px;
+}
+.section4-item .bottom,.section4-item .middle,.section4-item .top{
+    position: absolute;
+    height: 100%;
+    border-radius: 7px;
+}
+.section4-item img{
+    position: absolute;
+}
+.section4-item .bottom{
+    background: rgba(255,216,0,0.4);
+    left: 5%;
+    width: 90%;
+}
+.section4-item .middle{
+    background: rgba(255,216,0,0.3);
+     left: 10%;
+     width: 80%;
+ }
+.section4-item .top{
+    background: rgba(255,216,0,0.2);
+    left: 15%;
+    width: 70%;
+}
+@keyframes toBottom {
+    from { top: 0 }
+    to { top: -11px; }
+}
+@keyframes toMiddle {
+    from { top: 0 }
+    to { top: -17px; }
+}
+@keyframes toTop {
+    from { top: 0 }
+    to { top: -23px; }
+}
+.toBottom{
+    animation: toBottom 0.5s;
+}
+.toMiddle{
+    animation: toMiddle 0.5s;
+}
+.toTop{
+    animation: toTop 0.5s;
+}
+.bottomShowed{ top: -11px; }
+.middleShowed{ top: -17px; }
+.topShowed{ top: -23px; }
+
+
+@keyframes scale {
+    from { transform: scale(1) }
+    to { transform: scale(1.1); }
+}
+.scale{
+    transform: scale(1.1)
+}
+.section4-item:hover{
+    animation: scale 1s;
+}
+/*section5*/
+.section5-content{
+    // background: url("//cdn.dianwutong.com/home/images/index/p5.jpg");
+    @include bg-jpg(index/p5);
+    height: 350px;
+    width: 100%;
+}
+#marquee {
+    position:relative;
+    width: 100%;
+    overflow:hidden;
+}
+#marquee img {
+    border:0px;
+}
+#marquee dl, #marquee dt,#marquee dd,#marquee img {
+    float:left;
+    margin:0;
+    padding:0;
+}
+#marquee dl{
+    width:5000%;
+    height:350px;
+}
+#marquee img{
+    display: inline-block;
+    width: 450px;
+    height: 270px;
+    margin: 40px 20px;
+}
+
+.pic-content{
+    line-height: 350px;
+    height: 350px;
+}
+#marquee img{
+    display: inline-block;
+    width: 450px;
+    height: 270px;
+
+    margin: 40px 20px;
+    z-index: 99;
+}
+.section5-content .swiper-container .swiper-wrapper .swiper-slide{
+    width: 450px;
+    height: 270px;
+    margin: 40px 0;
+}

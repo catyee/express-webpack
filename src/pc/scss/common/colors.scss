@@ -1,0 +1,29 @@
+// 网站主色调
+@mixin color($color) {
+    #{$color}: #e9be2b;
+}
+/*********************************<背景颜色>**************************************/
+.bg-white{background:white;}
+.bg-black{background:black;}
+.bg-gray-a{background:#585858}
+.bg-gray-b{background:#6e6e6e}
+.bg-gray-c{background:#92a392}
+.bg-gray-d{background:#d0d0d0}
+/*********************************<字体颜色>*************************************/
+.color-red{color:red;}
+.color-blue{color:#337ab7;}
+.color-green{color:#03b679;}
+.color-orange{color:#E7604A;}
+.color-white{color:white;}
+.color-black{color:black;}
+.color-green-a{color:#164C18}
+.color-green-b{color:#19721D}
+.color-green-c{color:#2AA763}
+.color-green-d{color:#14B289}
+.color-green-e{color:#0D9572}
+.color-green-f{color:#65B887}
+.color-green-g{color:#BED5C3}
+.color-gray{color: #5c5c5c;}
+
+
+

@@ -1,0 +1,69 @@
+@mixin sprite1($top, $left) {
+    width: 68px;
+    height: 68px;
+    transform: scale(0.5);
+    background: url("//cdn.dianwutong.com/home/images/css_sprites.png") $top $left;
+}
+
+.bg-BGS {
+    @include sprite1(-98px, -10px);
+}
+
+.bg-BGS_click {
+    @include sprite1(-10px, -98px);
+}
+
+.bg-cloud_computing {
+    @include sprite1(-98px, -98px);
+}
+
+.bg-cloud_computing_click {
+    vertical-align: middle;
+    border-radius: 50%;
+    @include sprite1(-186px, -10px);
+}
+
+.bg-DATA_SERVICE {
+    @include sprite1(-186px, -98px);
+}
+
+.bg-DATA_SERVICE_click {
+    @include sprite1(-10px, -186px);
+}
+
+.bg-IOM {
+    @include sprite1(-98px, -186px);
+}
+
+.bg-IOM_click {
+    @include sprite1(-10px, -10px);
+}
+
+
+@mixin sprite2($top2, $left2) {
+    width: 50px; 
+    height: 50px;
+    background: url('//cdn.dianwutong.com/home/images/css_sprites.png') $top2 $left2;
+}
+.leftnormal{
+    @include sprite2(-279px, -268px);
+}
+.leftclick{
+    @include sprite2(-268px, -199px);
+}
+.rightnormal{
+    @include sprite2(-352px, -268px);
+}
+.righclick{
+    @include sprite2(-350px, -199px);
+}
+.news-normal{
+    @include sprite2(-18px, -24px);
+    vertical-align: text-bottom;
+    transform: scale(0.5);
+}
+.news-pressed{
+    @include sprite2(-102px, -20px);
+    vertical-align: text-bottom;
+    transform: scale(0.5);
+}
